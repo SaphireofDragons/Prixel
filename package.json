@@ -1,0 +1,16 @@
+{
+  "name": "prixel",
+  "version": "1.0.0",
+  "description": "pixel editor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "serve & livereload ."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "livereload": "^0.6.0",
+    "serve": "^3.2.7"
+  }
+}
