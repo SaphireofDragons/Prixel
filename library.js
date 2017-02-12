@@ -13,7 +13,9 @@ var table = createGrid();
 function setCellElement(table, x, y){
   table[y][x] = !table[y][x];
   drawTable(table, setCellElement);
+  drawCanvas(table);
 }
+//Switching colors from current to opposite
 
 function drawTable(table, selectFn){
   var tableRef = document.querySelector('table');
@@ -43,5 +45,18 @@ function drawTable(table, selectFn){
   })
   //Connecting elements to the table
 }
-
 drawTable(table, setCellElement);
+
+//Creating canvas relfection of the table/grid
+function drawCanvas(table){
+  var canvas = document.getElementById('canvas');
+  var ctx = canvas.getContext('2d');
+
+table.forEach(function(row, y){
+  row.forEach(function(cell, x){
+    ctx.fillStyle = cell ? "black" : "white";
+    ctx.fillRect(x*2, y*2, 2, 2);
+  })
+})
+}
+drawCanvas(table);

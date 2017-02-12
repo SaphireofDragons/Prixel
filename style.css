@@ -6,3 +6,8 @@ td {
 table {
   border-collapse: collapse;
 }
+/*canvas {
+  border: solid 1px black;
+  width: 64px;
+  height: 64px;
+}*/
